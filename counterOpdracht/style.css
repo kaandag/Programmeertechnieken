@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Barrio', cursive;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  transition: all 300ms;
+}
+
+.circle {
+  font-size: 1.5em;
+  border-radius: 50%;
+  color: white;
+  text-align: center;
+  background: black;
+  height: 80px;
+  width: 80px;
+  position: absolute;
+  line-height: 80px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
