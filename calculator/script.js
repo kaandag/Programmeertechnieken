@@ -15,10 +15,22 @@ function calculate() {
         }
         document.getElementById("result").innerHTML = output;
 
+    // } else if (operator == "substract") {
+    //     for (i = 0; i < res.length; i++) {
+    //         output-=parseFloat(res[i]);
+    //         document.getElementById("result").innerHTML = output;
+    //     }
     } else if (operator == "multiply") {
         for (i = 0; i < res.length; i++) {
             outputx*=parseFloat(res[i]);
             document.getElementById("result").innerHTML = outputx;
         }
-    }
+    } else if (operator == "divide") {
+        for (i = 1; i < res.length; i++) {
+            outputD /=parseFloat(res[i]);
+
+            document.getElementById("result").innerHTML = outputD;
+
+        }
+  }
   }
