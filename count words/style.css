@@ -51,6 +51,26 @@ body {
   line-height: 60px;
 }
 
+#resultU {
+  height: 60vh;
+  width: 60vw;
+  border: 1px solid;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+
+#resultF {
+  height: 10vh;
+  width: 60vw;
+  border: 1px solid;
+  position: absolute;
+  top: 160%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+
 #textarea {
   height: 60vh;
   width: 60vw;

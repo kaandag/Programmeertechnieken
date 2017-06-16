@@ -16,15 +16,38 @@ function countWords() {
     document.getElementById('resultK').innerHTML = "aantal karakters:" +  letter.length;
     document.getElementById('resultW').innerHTML = "aantal woorden:" + word.length;
     document.getElementById('resultL').innerHTML = "langste woord:" + longest;
+    document.getElementById('resultU').innerHTML = FirstLetterUpper();
+    document.getElementById('resultF').innerHTML = FindFrequentWord();
+
 }
 
-function FirstLetterUpper(string) {
+function FirstLetterUpper() {
     var text = document.getElementById('textarea').value;
     var word = text.split(" ");
+    var NewArray = [];
 
     for (var i = 0; i < word.length; i++) {
-        word[i].charAt(0).toUpperCase() + word[i].slice(1);
+        NewArray.push(word[i].charAt(0).toUpperCase() + word[i].slice(1));
     }
+    return NewArray.join(' ');
 }
 
-document.getElementById("button").addEventListener("click", FirstLetterUpper);
+function FindFrequentWord(){
+    var text = document.getElementById('textarea').value;
+    var word = text.split(" ");
+    var mostFrequent = 1;
+    var m = 0;
+    var string;
+
+    for (var i = 0; i < word.length; i++) {
+      for (var j = i; j < word.length; j++) {
+        if (word[i] == word[j]) m++;
+        if (mostFrequent < m) {
+          mostFrequent = m;
+          string = word[i];
+        }
+      }
+      m = 0;
+    }
+    return (string +" (komt " +mostFrequent + "x voor )");
+}
